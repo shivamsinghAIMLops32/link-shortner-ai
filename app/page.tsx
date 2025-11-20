@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Zap, Shield, BarChart, Globe, Smartphone, Lock } from 'lucide-react'
+import { ArrowRight, Zap, Shield, BarChart, Globe, Smartphone, Lock, Github } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { ModeToggle } from '@/components/mode-toggle'
 
@@ -73,10 +73,10 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="#features">
-                <a href="https://github.com/shivamsinghAIMLops32/link-shortner-ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
-                <Github className="h-4 w-4" />
-                <span>GitHub</span>
-              </a></Link>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full border-2">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </section>
