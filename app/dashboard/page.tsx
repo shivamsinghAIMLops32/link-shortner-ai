@@ -133,7 +133,7 @@ export default function DashboardPage() {
               <Heart className="h-4 w-4 text-red-500 fill-red-500" />
             </div>
             <div className="flex items-center gap-6">
-              <a href="https://github.com" target=" _blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
+              <a href="https://github.com/shivamsinghAIMLops32/link-shortner-ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors flex items-center gap-2">
                 <Github className="h-4 w-4" />
                 <span>GitHub</span>
               </a>

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
 import { getCachedLink, cacheLink } from '@/lib/redis'
 
-export async function GET(request: Request, { params }: { params: { shortCode: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ shortCode: string }> }) {
     const { shortCode } = await params // Next.js 15 requires awaiting params
 
     try {
