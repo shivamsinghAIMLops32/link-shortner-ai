@@ -40,7 +40,7 @@
 - 🔐 **JWT Authentication** - Secure user authentication with HTTP-only cookies
 - 🚀 **Redis Caching** - Lightning-fast link resolution with Redis
 - 🛡️ **Rate Limiting** - Prevent abuse with Redis-based rate limiting (10 links/minute)
-- 🗄️ **SQLite Database** - Lightweight, file-based database with Prisma ORM
+- 🗄️ **POSTGRESQL Database** - Lighting fast postgresql db via neon database with Prisma ORM
 - 🧹 **Auto Cleanup** - Background job removes expired links every minute
 - ✅ **Input Validation** - Zod schema validation for all API endpoints
 
