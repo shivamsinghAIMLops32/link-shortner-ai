@@ -24,6 +24,7 @@ model Link {
   shortCode   String   @unique
   customAlias String?  @unique
   clicks      Int      @default(0)
+  tags        String?
   expiresAt   DateTime?
   createdAt   DateTime @default(now())
   userId      String

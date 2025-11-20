@@ -7,7 +7,8 @@ import { z } from 'zod'
 
 const createLinkSchema = z.object({
   url: z.string().url({ message: "Invalid URL" }),
-  customAlias: z.string().min(3).max(20).regex(/^[a-zA-Z0-9-_]+$/, "Alias must be alphanumeric").optional().or(z.literal('')),
+  customAlias: z.string().min(3).max(20).regex(/^[a-z0-9-_]+$/, "Alias must be alphanumeric").optional().or(z.literal('')),
+  tags: z.string().optional(),
   expiresIn: z.number().min(1).optional().nullable()
 })
 
@@ -40,7 +41,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: validation.error.errors[0].message }, { status: 400 })
     }
 
-    const { url, customAlias, expiresIn } = validation.data
+    const { url, customAlias, tags, expiresIn } = validation.data
 
     let shortCode = customAlias || generateShortCode()
 
@@ -77,6 +78,7 @@ export async function POST(request: Request) {
         originalUrl: url,
         shortCode,
         customAlias: customAlias || null,
+        tags: tags || null,
         userId: session.id,
         expiresAt
       }
